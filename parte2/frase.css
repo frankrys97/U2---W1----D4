@@ -31,14 +31,52 @@ p {
 }
 
 .parole {
-  display: inline-flex;
-  flex-direction: column;
-  height: 36px;
-  overflow: hidden;
-  color: #6a889c;
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 28px;
 }
 
 .parole i {
+  position: absolute;
+  opacity: 0;
+}
+
+.parole i:nth-child(1) {
+  animation: changeWord 6s infinite;
+}
+.parole i:nth-child(2) {
+  animation: changeWord 6s 2s infinite;
+}
+.parole i:nth-child(3) {
+  animation: changeWord 6s 4s infinite;
+}
+
+@keyframes changeWord {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  25% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  75% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+}
+
+/* .parole i {
   animation: changeWord 5s ease infinite;
 }
 
@@ -53,4 +91,4 @@ p {
   66% {
     transform: translateY(-72px);
   }
-}
+} */
