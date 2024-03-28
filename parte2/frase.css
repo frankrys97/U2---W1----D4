@@ -39,18 +39,18 @@ p {
 }
 
 .parole i {
-    animation: changeWord 5s ease infinite;
+  animation: changeWord 5s ease infinite;
 }
 
 
 @keyframes changeWord {
-   0% {
+  0% {
     transform: translateY(0);
-   }
-   33% {
+  }
+  33% {
     transform: translateY(-36px);
-   }
-   66% {
+  }
+  66% {
     transform: translateY(-72px);
-}
+  }
 }
